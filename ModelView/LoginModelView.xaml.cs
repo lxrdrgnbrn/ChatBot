@@ -29,11 +29,12 @@ public partial class LoginView : Window
         Application.Current.Shutdown();
     }
 
+    // Кнопка входа
     private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
     {
         if (string.IsNullOrEmpty(TxtUser.Text))
         {
-            TxtUser.BorderBrush = Brushes.Tomato;
+            TxtUser.BorderBrush = Brushes.Tomato; // если текст бокс пустой то он окрашивается в красный
         }
         else
         {
@@ -43,8 +44,10 @@ public partial class LoginView : Window
             Hide();
         }
     }
+    
 
-    private void TxtUser_OnMouseDown(object sender, MouseButtonEventArgs e)
+    // возвращения цвета окна ввода при фокусе
+    private void TxtUser_OnGotFocus(object sender, RoutedEventArgs e)
     {
         TxtUser.BorderBrush = Brushes.Black;
     }

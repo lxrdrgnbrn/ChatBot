@@ -29,33 +29,39 @@ public partial class ChatView : Window
         MessageList.Items.Add(startMessageData);
     }
 
+    // Реализация перетаскивания окна
     private void Window_MouseDown(object sender, MouseButtonEventArgs e)
     {
         if (e.LeftButton == MouseButtonState.Pressed)
             DragMove();
     }
-
+    
+    // обработчик кнопки сворачивания окна
     private void BtnMinimize_OnClick(object sender, RoutedEventArgs e)
     {
         WindowState = WindowState.Minimized;
     }
 
+    // обработчик кнопки закрытия окна
     private void BtnClose_OnClick(object sender, RoutedEventArgs e)
     {
         _messageHistoryService.SaveHistory(MessageList, _userName);
         Application.Current.Shutdown();
     }
 
+    // обработчик отправки сообщения по нажатию ентера
     private void MessageBox_OnKeyDown(object sender, KeyEventArgs e)
     {
         if (e.Key == Key.Enter) SendMessage();
     }
 
+    // обработчик кнопки отправки сообщения
     private void BtnSend_OnClick(object sender, RoutedEventArgs e)
     {
         SendMessage();
     }
-
+    
+    // Метод для отправки сообщения
     private void SendMessage()
     {
         var newMessageData = new MessageData

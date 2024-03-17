@@ -151,7 +151,7 @@
                          BorderBrush="Black"
                          BorderThickness="0,0,0,2"
                          HorizontalContentAlignment="Center"
-                         MouseDown="TxtUser_OnMouseDown" />
+                         GotFocus="TxtUser_OnGotFocus"/>
                 <Button x:Name="BtnLogin"
                         Margin="0,40,0,0"
                         BorderThickness="0"
