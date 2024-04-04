@@ -52,13 +52,20 @@ public partial class ChatView : Window
     // обработчик отправки сообщения по нажатию ентера
     private void MessageBox_OnKeyDown(object sender, KeyEventArgs e)
     {
-        if (e.Key == Key.Enter) SendMessage();
+        if (MessageBox.Text != "")
+        {
+            if (e.Key == Key.Enter) SendMessage();
+        }
     }
 
     // обработчик кнопки отправки сообщения
     private void BtnSend_OnClick(object sender, RoutedEventArgs e)
     {
-        SendMessage();
+        if (MessageBox.Text != "")
+        {
+            SendMessage();
+        }
+        
     }
     
     // Метод для отправки сообщения

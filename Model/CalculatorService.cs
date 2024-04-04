@@ -1,6 +1,6 @@
+using MathNet.Symbolics; // Используем пространство имен MathNet.Symbolics для работы с математическими выражениями
 using
     System.Text.RegularExpressions; // Используем пространство имен System.Text.RegularExpressions для работы с регулярными выражениями
-using MathNet.Symbolics; // Используем пространство имен MathNet.Symbolics для работы с математическими выражениями
 
 /// <summary>
 /// CalculatorService представляет собой класс для обработки регулярных математических выражений

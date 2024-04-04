@@ -6,7 +6,7 @@ namespace ChatBot.Model;
 /// <summary>
 /// Класс MessageData представляет данные сообщения в чате.
 /// </summary>
-public class MessageData : INotifyPropertyChanged
+public class MessageData : INotifyPropertyChanged //Интерфейс INotifyPropertyChanged используется для уведомления клиентов(обычно привязывая клиентов) об изменении значения свойства.
 {
     // Приватные поля класса
     private string _nick; // Никнейм отправителя сообщения
